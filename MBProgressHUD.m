@@ -1115,22 +1115,22 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 #pragma mark - Views
 
 - (void)updateForBackgroundStyle {
-    [self.effectView removeFromSuperview];
-    self.effectView = nil;
-
-    MBProgressHUDBackgroundStyle style = self.style;
-    if (style == MBProgressHUDBackgroundStyleBlur) {
-        UIBlurEffect *effect =  [UIBlurEffect effectWithStyle:self.blurEffectStyle];
-        UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-        [self insertSubview:effectView atIndex:0];
-        effectView.frame = self.bounds;
-        effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        self.backgroundColor = self.color;
-        self.layer.allowsGroupOpacity = NO;
-        self.effectView = effectView;
-    } else {
-        self.backgroundColor = self.color;
-    }
+//    [self.effectView removeFromSuperview];
+//    self.effectView = nil;
+//
+//    MBProgressHUDBackgroundStyle style = self.style;
+//    if (style == MBProgressHUDBackgroundStyleBlur) {
+//        UIBlurEffect *effect =  [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+//        UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//        [self insertSubview:effectView atIndex:0];
+//        effectView.frame = self.bounds;
+//        effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//        self.backgroundColor = self.color;
+//        self.layer.allowsGroupOpacity = NO;
+//        self.effectView = effectView;
+//    } else {
+//        self.backgroundColor = self.color;
+//    }
 }
 
 - (void)updateViewsForColor:(UIColor *)color {
